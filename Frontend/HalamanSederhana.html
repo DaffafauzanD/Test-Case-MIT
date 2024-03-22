@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Case</title>
+</head>
+
+<body>
+    <h3>Masukan nama</h3>
+    <form action="">
+        <input type="text" id="nama">
+        <button type="button" onclick="ChangePhase()">kirim</button>
+    </form>
+    <h1 id="Pesan"></h1>
+</body>
+<script>
+    function ChangePhase() {
+        var name = document.getElementById("nama").value;
+        var pesan = "Selamat datang " + name + "!";
+        console.log(pesan)
+        var KirimPesan = document.getElementById("Pesan").innerText = pesan;
+    }
+</script>
+
+</html>
