@@ -28,7 +28,16 @@ body {
 	border-radius: 30px;
 }
 
-.box-container{
+.box-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	align-items: center;
+	margin: 50px 50px 0px 50px;
+	flex-direction: column;
+	font-family: "Inter", "sans-serif";
+	color: rgb(48, 48, 48);
+	border-radius: 30px;
 	background-color: rgb(255 255 255 / 30%);
   	backdrop-filter: blur(10px);
 }
@@ -39,7 +48,16 @@ body {
     flex-wrap: wrap;
 }
 
-
+.heading {
+	font-size: 40px;
+	font-family: "Big Shoulders Text",
+		sans-serif;
+	color: rgb(48, 48, 48);
+	text-align: center;
+	margin-left: 50px;
+	margin-bottom: 50px;
+	margin-top: 30px;
+}
 
 @media screen and (max-width: 770px) {
 	.container {
