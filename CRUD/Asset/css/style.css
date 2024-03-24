@@ -1,0 +1,143 @@
+.img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.background-color {
+	background: rgb(174, 238, 208);
+	background: radial-gradient(
+		circle,
+		rgba(174, 238, 208, 1) 0%,
+		rgba(
+				148,
+				233,
+				165,
+				0.5522584033613445
+			)
+			100%
+	);
+}
+
+* {
+	font-family: "Poppins", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+
+h1 {
+	text-align: center;
+	/*ketebalan font*/
+	font-weight: 300;
+}
+
+#bg {
+	position: fixed;
+	top: -50%;
+	left: -50%;
+	width: 200%;
+	height: 200%;
+	z-index: -2;
+}
+
+.photo {
+	width: 700px;
+	margin-bottom: 2rem;
+}
+
+.responsive-box {
+	display: flex;
+	gap: 10px;
+}
+
+.text-start {
+	font-size: 1rem;
+}
+
+.container-sm {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.tulisan_login {
+	text-align: center;
+	/*membuat semua huruf menjadi kapital*/
+	text-transform: uppercase;
+}
+
+.heading {
+	margin-top: 12rem;
+	text-transform: capitalize;
+	font-weight: bold;
+}
+
+.kotak_login {
+	width: 43rem;
+	background: white;
+	/*meletakkan form ke tengah*/
+	margin: 1rem auto;
+	padding: 30px 20px 3rem;
+	border-radius: 10px;
+}
+
+.kotak_login a {
+	text-decoration: none;
+}
+
+label {
+	font-size: 11pt;
+}
+
+.tombol_login {
+	color: rgb(102, 102, 102);
+	font-size: 1rem;
+	width: 100%;
+	margin-top: 10px;
+	transition: 300ms;
+}
+
+.kotak_submit {
+	display: flex;
+	justify-content: space-between;
+}
+
+.fd {
+	margin-bottom: 0.6rem;
+}
+
+.show-hide {
+	font-size: 1.6rem;
+	color: rgb(102, 102, 102);
+}
+
+.input-group-text {
+	background-color: rgb(255, 255, 255);
+	border-left: none;
+}
+
+.fc {
+	border-right: none;
+}
+
+.link {
+	color: #232323;
+	text-decoration: none;
+	font-size: 10pt;
+}
+
+@media screen and (max-width: 765px) {
+	.kotak_login {
+		width: 43rem;
+		background: white;
+		/*meletakkan form ke tengah*/
+		margin: 1rem auto;
+		padding: 30px 20px;
+		border-radius: 10px;
+	}
+}

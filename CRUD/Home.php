@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <style>
+        <?php include 'Asset/css/style.css'; ?>
+    </style>
     <title>Gudang</title>
 </head>
 
-<body>
+<body class="background-color">
 
     <section class="container">
         <div class="d-flex justify-content-between align-items-baseline">
             <h1 class="mt-5">GUDANG</h1>
             <button class="btn btn-primary"><a href="FormData.php" class="text-decoration-none text-white">Tambah
                     data</a></button>
+            <button class="btn btn-primary"><a href="Logout.php"
+                    class="text-decoration-none text-white">Logout</a></button>
         </div>
         <div class="table-responsive">
             <table class="table mt-3">
@@ -39,7 +44,7 @@
                     foreach ($pets as $data): ?>
                         <tr>
                             <td>
-                                <?php echo $data["Kd_Barang"]; ?>
+                                <?php echo $i++; ?>
                             </td>
                             <td>
                                 <?php echo $data["Nama_Barang"] ?>
@@ -54,10 +59,14 @@
                                 <?php echo $data["Harga_Distributor"] ?>
                             </td>
                             <td>
-                                <?php echo $data["Nama_Barang"] ?>
+                                <img src="Asset/uploads/<?php echo $data["Gambar"] ?>" alt="" srcset="" class="img">
                             </td>
-                            <td class="text-center">Edit</td>
-                            <td class="text-center">Delete</td>
+                            <td class="text-center">
+                                <a href="FormEditData.php?id=<?= $data["Kd_Barang"]; ?>">Edit</a>
+                            </td>
+                            <td class="text-center"><a onclick="return confirm('are you sure?')"
+                                    href="DeleteData.php?id=<?= $data["Kd_Barang"]; ?>&gambar=<?= $data['Gambar'] ?>">Delete</a>
+                            </td>
                         </tr>
 
                     <?php endforeach;

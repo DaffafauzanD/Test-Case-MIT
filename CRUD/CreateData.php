@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
     $file_tmp = $_FILES['gambar']['tmp_name'];
 
     if (in_array($ekstensi, $extensi_allowed) === true) {
-        move_uploaded_file($file_tmp, 'uploads/' . $namagambar);
+        move_uploaded_file($file_tmp, 'Asset/uploads/' . $namagambar);
         $query = "INSERT INTO tb_produk SET Nama_Barang='$namabarang', Harga_HPP='$hargahpp', Harga_Retail='$hargaretail', Harga_Distributor='$hargadistributor', Gambar='$namagambar'";
         $create = mysqli_query($db_connection, $query);
 
